@@ -1,0 +1,107 @@
+@import './breakpoints';
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+$pad: 20px;
+
+.grid {
+  margin: 0 $pad;
+
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.row {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  .grid &:last-of-type {
+    padding-right: 0;
+  }
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.force {
+  &.gutter {
+    padding-right: $pad;
+  }
+}
+
+@media #{$large-screen} {
+  .gutter {
+    padding-right: $pad;
+  }
+  [class*='col-'] {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .col-10 {
+    width: 10%;
+  }
+  .col-20 {
+    width: 20%;
+  }
+  .col-30 {
+    width: 30%;
+  }
+  .col-35 {
+    width: 35%;
+  }
+  .col-40 {
+    width: 40%;
+  }
+  .col-50 {
+    width: 50%;
+  }
+  .col-60 {
+    width: 60%;
+  }
+  .col-65 {
+    width: 65%;
+  }
+  .col-70 {
+    width: 70%;
+  }
+  .col-80 {
+    width: 80%;
+  }
+  .col-90 {
+    width: 90%;
+  }
+  .col-100 {
+    width: 100%;
+  }
+}
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: $pad 0 $pad $pad;
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+}

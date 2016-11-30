@@ -1,0 +1,13 @@
+.category-list {
+
+ // background-color: var(--background-color);
+
+  .category {
+    line-height: 35px;
+  }
+
+  .category:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+  }
+
+}

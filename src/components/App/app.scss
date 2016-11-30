@@ -1,0 +1,30 @@
+@import 'grid';
+@import 'theme';
+
+html, body {
+  @include theme;
+  background-color: var(--background-color);
+}
+
+.todo-app {
+
+  font-size: 20px;
+  font-family: 'Open Sans',sans-serif;
+
+  .category-list-container-container {
+    display: inline-block;
+    vertical-align: top;
+
+    @media #{$large-screen} {
+      border-right: 1px solid #cccccc;
+      height: 95vh;
+    }
+  }
+
+  .todo-list-container-container {
+    display: inline-block;
+    vertical-align: top;
+
+  }
+
+}

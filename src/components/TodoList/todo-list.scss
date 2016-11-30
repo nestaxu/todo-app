@@ -1,0 +1,20 @@
+@import '../App/breakpoints';
+
+.todo-list {
+
+  .todo {
+    line-height: 35px;
+  }
+
+  .todo:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  @media #{$large-screen} {
+    &.scrollable {
+      overflow-y: auto;
+      height: var(--scrollable-todo-list-height, 85vh);
+    }
+  }
+
+}
