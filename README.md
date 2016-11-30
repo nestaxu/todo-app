@@ -7,3 +7,5 @@ To start the app:
 2. cd to the todo-app directory
 3. npm install
 4. npm start
+
+As this todo-app uses CSS variables, please use Chrome 49+, Firefox 42+, Safari 9.1+, or iOS Safari 9.3+ to load the app.
