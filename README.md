@@ -3,7 +3,7 @@ This todo-app was made for a quick win and only for the UI demo purposes, so is 
 
 To start the app:
 
-git clone https://github.com/nestaxu/todo-app
-cd to the todo-app directory
-npm install
-npm start
+1. git clone the repository
+2. cd to the todo-app directory
+3. npm install
+4. npm start
